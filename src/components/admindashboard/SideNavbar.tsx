@@ -35,11 +35,11 @@ export default function Sidebar() {
 
       
         <nav className="mt-4 space-y-2">
-          <NavItem icon={Home} label="User Management" href="/dashboard/user-management" isActive={pathname === "/dashboard/user-management" } />
-          <NavItem icon={Users} label="Job Seekers" href="/dashboard/job-seekers" isActive={pathname === "/dashboard/job-seekers" } /> 
-          <NavItem icon={Briefcase} label="Employer Management" href="/dashboard/employer-management"isActive={pathname === "/dashboard/employer-management" } />
-          <NavItem icon={GraduationCap} label="Tutor Management" href="/dashboard/tutor-management"  isActive={pathname === "/dashboard/tutor-management" }/>
-          <NavItem icon={School} label="Institution Management" href="/dashboard/institution-management" isActive={pathname === "/dashboard/institution-management" } />
+          <NavItem icon={Home} label="User Management" href="/dashboard/admin/user-management" isActive={pathname === "/dashboard/admin/user-management" } />
+          <NavItem icon={Users} label="Job Seekers" href="/dashboard/admin/job-seekers" isActive={pathname === "/dashboard/admin/job-seekers" } /> 
+          <NavItem icon={Briefcase} label="Employer Management" href="/dashboard/admin/employer-management"isActive={pathname === "/dashboard/admin/employer-management" } />
+          <NavItem icon={GraduationCap} label="Tutor Management" href="/dashboard/admin/tutor-management"  isActive={pathname === "/dashboard/admin/tutor-management" }/>
+          <NavItem icon={School} label="Institution Management" href="/dashboard/admin/institution-management" isActive={pathname === "/dashboard/admin/institution-management" } />
         </nav>
       </div>
 
