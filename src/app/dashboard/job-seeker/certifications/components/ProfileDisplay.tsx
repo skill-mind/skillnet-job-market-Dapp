@@ -1,7 +1,7 @@
 import React from "react";
 import { Edit } from "lucide-react";
 import Image from "next/image";
-import { ProfileData } from "@/app/dashboard/user-profile/components/Form";
+import { ProfileData } from "./Form";
 
 interface ProfileDisplayProps {
   profileData: ProfileData;

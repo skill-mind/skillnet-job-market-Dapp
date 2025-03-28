@@ -8,6 +8,7 @@ import Notifications from "./notifications/notifications";
 import UserPage from "./user-profile/page";
 import Support from "./support/support";
 import PaymentsTab from "./payments/payments";
+import ChatModal from "../job-seeker/components/ChatbotAI";
 
 function Page() {
   const { activeSection } = useContext(DashBoardContext);
