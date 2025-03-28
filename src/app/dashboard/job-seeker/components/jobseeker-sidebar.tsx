@@ -34,8 +34,8 @@ export function Sidebar() {
     useContext(DashBoardContext);
 
   return (
-    <aside className="w-64 border-r relative min-h-[90vh] bg-[#161716] border-gray-800 overflow-y-auto">
-      <div className="p-4 h-[90%]  overflow-y-auto scrollbar-hide scroll-smooth">
+    <aside className="w-64 border-r relative h-screen bg-[#161716] border-gray-800 overflow-y-auto">
+      <div className="p-4 h-[100%] overflow-y-auto overflow-hidden scrollbar-hide scroll-smooth">
         <nav className="space-y-2">
           <NavItem
             label="Home"

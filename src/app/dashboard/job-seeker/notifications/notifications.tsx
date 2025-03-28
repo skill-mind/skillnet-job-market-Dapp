@@ -40,7 +40,7 @@ function Notification() {
   };
 
   return (
-    <div className="w-full h-full mx-auto p-3 sm:p-6">
+    <div className="w-full h-screen overflow-y-auto scrollbar-hide mx-auto p-3 sm:p-6">
       <header className="w-full flex flex-wrap overflow-x-auto gap-2 sm:gap-4 mb-4">
         {tabs.map((tab) => (
           <button

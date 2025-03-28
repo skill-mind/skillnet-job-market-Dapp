@@ -52,7 +52,7 @@ const JobSeeker: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen mx-5 lg:mx-24 text-white py-6">
+    <div className="h-screen overflow-y-auto scrollbar-hide mx-5 lg:mx-24 text-white py-6">
       <h1 className="text-2xl font-bold mb-6">Jobs you might like</h1>
 
       <div className="mb-6">
@@ -73,14 +73,40 @@ const JobSeeker: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-4 gap-[4rem]">
-        <div className="col-span-3">{renderContent()}</div>
-        <div className="hidden lg:block">
-          {(savedJobs.length > 0 || activeTab !== "saved") && <AllFilters />}
+      <div
+        className={`mt-6 grid gap-[4rem] ${
+          savedJobs.length > 0 ||
+          (activeTab !== "saved" && activeTab !== "applications")
+            ? "grid-cols-1 lg:grid-cols-4"
+            : "grid-cols-1"
+        }`}
+      >
+        {/* Main Content */}
+        <div
+          className={`${
+            savedJobs.length > 0 ||
+            (activeTab !== "saved" && activeTab !== "applications")
+              ? "col-span-4 lg:col-span-3"
+              : "col-span-1"
+          }`}
+        >
+          {renderContent()}
         </div>
+
+        {/* Sidebar */}
+        {(savedJobs.length > 0 ||
+          (activeTab !== "saved" && activeTab !== "applications")) && (
+          <div className="hidden lg:block col-span-1">
+            <div className="w-full">
+              <AllFilters />
+            </div>
+          </div>
+        )}
       </div>
 
-      {(savedJobs.length > 0 || activeTab !== "saved") && (
+      {/* Mobile Filters */}
+      {(savedJobs.length > 0 ||
+        (activeTab !== "saved" && activeTab !== "applications")) && (
         <>
           <button
             className="lg:hidden fixed bottom-4 right-4 bg-primary text-black px-4 py-2 rounded-lg shadow-lg"

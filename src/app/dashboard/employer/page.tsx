@@ -6,6 +6,8 @@ import { DashBoardContext } from "@/app/useContext/dashboardContext";
 import JobOpening from "./job-openings/job-openings";
 import Notifications from "./notifications/notifications";
 import UserPage from "./user-profile/page";
+import Support from "./support/support";
+import PaymentsTab from "./payments/payments";
 
 function Page() {
   const { activeSection } = useContext(DashBoardContext);
@@ -20,6 +22,10 @@ function Page() {
         return <JobOpening />;
       case "notifications":
         return <Notifications />;
+      case "support":
+        return <Support />;
+      case "payments":
+        return <PaymentsTab />;
 
       default:
         return <EmployerDashboard />;

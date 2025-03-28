@@ -10,30 +10,31 @@ interface Student {
   date: string;
 }
 
+const students: Student[] = [
+  {
+    id: "1",
+    sn: 1,
+    transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2...",
+    amount: 15,
+    date: "12th Jan, 2025",
+  },
+  {
+    id: "2",
+    sn: 1,
+    transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2",
+    amount: 17,
+    date: "12th Jan, 2025",
+  },
+  {
+    id: "3",
+    sn: 1,
+    transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2",
+    amount: 56,
+    date: "12th Jan, 2025",
+  },
+];
+
 function Payment_history() {
-  const students: Student[] = [
-    {
-      id: "1",
-      sn: 1,
-      transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2...",
-      amount: 15,
-      date: "12th Jan, 2025",
-    },
-    {
-      id: "2",
-      sn: 1,
-      transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2",
-      amount: 17,
-      date: "12th Jan, 2025",
-    },
-    {
-      id: "3",
-      sn: 1,
-      transactionId: "0xe46d0b1039a8f97df2800062dde83010d3de04df2",
-      amount: 56,
-      date: "12th Jan, 2025",
-    },
-  ];
 
   return (
     <div className="overflow-y-auto flex-grow w-full md:w-[calc(100vw-405px)] bg-[#101110] text-white">

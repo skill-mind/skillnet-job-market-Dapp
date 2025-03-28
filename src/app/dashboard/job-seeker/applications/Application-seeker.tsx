@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import RecentTab from "./components/RecentTab";
-import SavedTab from "./components/SavedTab";
-import ApplicationTab from "./components/ApplicationTabs";
-import { Job } from "./components/RecentTabBox";
-import AllFilters from "./components/SideAllFilters";
-import FilterBottomSheet from "./components/FilterBottomSheet";
+import RecentTab from "../components/RecentTab";
+import SavedTab from "../components/SavedTab";
+import ApplicationTab from "../components/ApplicationTabs";
+import { Job } from "../components/RecentTabBox";
+import AllFilters from "../components/SideAllFilters";
+import FilterBottomSheet from "../components/FilterBottomSheet";
 
 type TabType = "recent" | "saved" | "applications";
 
@@ -52,7 +52,7 @@ const ApplicationSeeker: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen mx-5 lg:mx-24 text-white py-6">
+    <div className="h-screen scrollbar-hide overflow-y-auto mx-5 lg:mx-24 text-white py-6">
       <h1 className="text-2xl font-bold mb-6">Jobs you might like</h1>
 
       <div className="mb-6">

@@ -7,7 +7,8 @@ import { useContext } from "react";
 import { DashBoardContext } from "@/app/useContext/dashboardContext";
 import JobSeeker from "./job-seeker";
 import Notification from "./notifications/notifications";
-import ApplicationSeeker from "./Application-seeker";
+import ApplicationSeeker from "./applications/Application-seeker";
+import Support from "./support/support";
 
 function Page() {
   const { activeSection } = useContext(DashBoardContext);
@@ -21,7 +22,7 @@ function Page() {
       case "notifications":
         return <Notification />;
       case "support":
-        return "support";
+        return <Support />;
       case "chatbot":
         return "chatbot";
       default:
@@ -32,9 +33,11 @@ function Page() {
   return (
     <div>
       <NavbarJobSeeker />
-      <div className="grid grid-cols-[1fr_5fr] w-full">
+      <div className="grid grid-cols-[1fr_5fr] w-full h-screen overflow-hidden">
         <Sidebar />
-        <div className="p-4">{renderContent()}</div>
+        <div className="p-4 overflow-hidden scrollbar-hide overflow-y-auto h-full">
+          {renderContent()}
+        </div>
       </div>
       <Footer />
     </div>
