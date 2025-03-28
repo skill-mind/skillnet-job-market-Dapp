@@ -1,6 +1,6 @@
 "use client";
 import { Percent } from "lucide-react";
-import Payment_history from "../../payment_history";
+import Payment_history from "./payment_history";
 import PaymentStatCard from "./paymentStatsCard";
 
 const stats = [

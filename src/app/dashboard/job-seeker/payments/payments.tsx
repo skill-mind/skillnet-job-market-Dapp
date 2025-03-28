@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Payment_history from "../payment_history";
+import Payment_history from "./components/payment_history";
 import PaymentStats from "./components/paymentStats";
 import PaymentStatsWeekly from "./components/paymentsStatsWeekly";
 import PaymentStatsMonth from "./components/paymentsStatsMonthly";
