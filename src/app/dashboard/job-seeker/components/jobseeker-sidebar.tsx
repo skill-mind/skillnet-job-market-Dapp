@@ -7,7 +7,7 @@ import notificationIcon from "../../../../../public/img/notification.svg";
 import chatbot from "../../../../../public/chat-bot.png";
 import support from "../../../../../public/support.svg";
 import { DashBoardContext } from "@/app/useContext/dashboardContext";
-import ChatModal from "./ChatbotAI";
+// import ChatModal from "./ChatbotAI";
 
 interface NavItemProps {
   icon: ReactNode;
@@ -33,15 +33,15 @@ function NavItem({ icon, label, active = false, onClick }: NavItemProps) {
 export function Sidebar() {
   const { activeSection, setActiveSection: onSectionChange } =
     useContext(DashBoardContext);
-  const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+  // const [isChatModalOpen, setIsChatModalOpen] = useState(false);
 
-  const handleChatbotClick = () => {
-    setIsChatModalOpen(true);
-  };
+  // const handleChatbotClick = () => {
+  //   setIsChatModalOpen(true);
+  // };
 
-  const handleCloseChatModal = () => {
-    setIsChatModalOpen(false);
-  };
+  // const handleCloseChatModal = () => {
+  //   setIsChatModalOpen(false);
+  // };
 
   return (
     <>
@@ -86,14 +86,13 @@ export function Sidebar() {
                 icon={<Image src={chatbot} alt="Jo" height={20} width={20} />}
                 label="Ai Chatbot"
                 active={activeSection === "chatbot"}
-                onClick={handleChatbotClick}
               />
             </div>
           </nav>
         </div>
       </aside>
 
-      {isChatModalOpen && <ChatModal onClose={handleCloseChatModal} />}
+      {/* {isChatModalOpen && <ChatModal onClose={handleCloseChatModal} />} */}
     </>
   );
 }
